@@ -7,12 +7,39 @@
 //
 
 #import "CMAppDelegate.h"
+#import "CMBeaconViewController.h"
+#import "CMClientViewController.h"
+
+@interface CMAppDelegate ()
+@property (nonatomic, strong) CMBeaconViewController *beaconController;
+@property (nonatomic, strong) CMClientViewController *clientController;
+@end
 
 @implementation CMAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
+    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+
+    
+    self.beaconController = [[CMBeaconViewController alloc] initWithNibName:@"CMBeaconViewController" bundle:nil];
+    [self.beaconController setTitle:@"Beacon"];
+    [self.beaconController.tabBarItem setImage:[UIImage imageNamed:@"bullhorn"]];
+    
+    self.clientController = [[CMClientViewController alloc] initWithNibName:@"CMClientViewController" bundle:nil];
+    [self.clientController setTitle:@"Client"];
+    [self.clientController.tabBarItem setImage:[UIImage imageNamed:@"radar"]];
+    
+    [self.beaconController setCMUDID:@"dae137d2-48a7-11e3-b6c8-ce3f5508acd9"];
+    [self.clientController setCMUDID:@"dae137d2-48a7-11e3-b6c8-ce3f5508acd9"];
+
+    UITabBarController *tabBarController = [[UITabBarController alloc] init];
+    [tabBarController setViewControllers:@[self.beaconController, self.clientController]];
+
+    self.window.rootViewController = tabBarController;
+    [self.window makeKeyAndVisible];
+    
     return YES;
 }
 							
@@ -41,6 +68,10 @@
 - (void)applicationWillTerminate:(UIApplication *)application
 {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+}
+
+-(void)updateUUID {
+    
 }
 
 @end

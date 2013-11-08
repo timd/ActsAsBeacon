@@ -1,5 +1,5 @@
 //
-//  CMFirstViewController.h
+//  CMSecondViewController.h
 //  ActsAsBeacon
 //
 //  Created by Tim on 07/11/2013.
@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface CMFirstViewController : UIViewController
+@interface CMClientViewController : UIViewController 
+
+@property (nonatomic, copy) NSString *CMUDID;
 
 @end
