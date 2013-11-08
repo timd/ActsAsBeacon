@@ -13,8 +13,6 @@
 		22E9DB39182BE172008748FF /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 22E9DB37182BE172008748FF /* InfoPlist.strings */; };
 		22E9DB3B182BE172008748FF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 22E9DB3A182BE172008748FF /* main.m */; };
 		22E9DB3F182BE172008748FF /* CMAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 22E9DB3E182BE172008748FF /* CMAppDelegate.m */; };
-		22E9DB42182BE172008748FF /* Main_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 22E9DB40182BE172008748FF /* Main_iPhone.storyboard */; };
-		22E9DB45182BE172008748FF /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 22E9DB43182BE172008748FF /* Main_iPad.storyboard */; };
 		22E9DB48182BE172008748FF /* CMBeaconViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 22E9DB47182BE172008748FF /* CMBeaconViewController.m */; };
 		22E9DB4B182BE172008748FF /* CMClientViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 22E9DB4A182BE172008748FF /* CMClientViewController.m */; };
 		22E9DB4D182BE172008748FF /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 22E9DB4C182BE172008748FF /* Images.xcassets */; };
@@ -56,8 +54,6 @@
 		22E9DB3C182BE172008748FF /* ActsAsBeacon-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ActsAsBeacon-Prefix.pch"; sourceTree = "<group>"; };
 		22E9DB3D182BE172008748FF /* CMAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CMAppDelegate.h; sourceTree = "<group>"; };
 		22E9DB3E182BE172008748FF /* CMAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CMAppDelegate.m; sourceTree = "<group>"; };
-		22E9DB41182BE172008748FF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPhone.storyboard; sourceTree = "<group>"; };
-		22E9DB44182BE172008748FF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPad.storyboard; sourceTree = "<group>"; };
 		22E9DB46182BE172008748FF /* CMBeaconViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CMBeaconViewController.h; sourceTree = "<group>"; };
 		22E9DB47182BE172008748FF /* CMBeaconViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CMBeaconViewController.m; sourceTree = "<group>"; };
 		22E9DB49182BE172008748FF /* CMClientViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CMClientViewController.h; sourceTree = "<group>"; };
@@ -110,7 +106,6 @@
 		22E9DB22182BE171008748FF = {
 			isa = PBXGroup;
 			children = (
-				22E9DB7F182D6DB9008748FF /* Assets */,
 				22E9DB34182BE172008748FF /* ActsAsBeacon */,
 				22E9DB59182BE172008748FF /* ActsAsBeaconTests */,
 				22E9DB2D182BE172008748FF /* Frameworks */,
@@ -144,9 +139,9 @@
 			isa = PBXGroup;
 			children = (
 				22E9DB69182BE1D3008748FF /* App delegate */,
-				22E9DB6C182BE21D008748FF /* Storyboards */,
 				22E9DB6A182BE1DE008748FF /* Beacon view controller */,
 				22E9DB6B182BE1E9008748FF /* Client view controller */,
+				22E9DB7F182D6DB9008748FF /* Assets */,
 				22E9DB4C182BE172008748FF /* Images.xcassets */,
 				22E9DB35182BE172008748FF /* Supporting Files */,
 			);
@@ -204,23 +199,13 @@
 		22E9DB6B182BE1E9008748FF /* Client view controller */ = {
 			isa = PBXGroup;
 			children = (
+				22E9DB90182D720F008748FF /* CMBeacon class */,
 				22E9DB49182BE172008748FF /* CMClientViewController.h */,
 				22E9DB4A182BE172008748FF /* CMClientViewController.m */,
 				22E9DB76182D43AC008748FF /* CMClientViewController.xib */,
 				22E9DB7A182D47E1008748FF /* CMClientTableCell.xib */,
-				22E9DB7C182D49E0008748FF /* CMBeacon.h */,
-				22E9DB7D182D49E0008748FF /* CMBeacon.m */,
 			);
 			name = "Client view controller";
-			sourceTree = "<group>";
-		};
-		22E9DB6C182BE21D008748FF /* Storyboards */ = {
-			isa = PBXGroup;
-			children = (
-				22E9DB40182BE172008748FF /* Main_iPhone.storyboard */,
-				22E9DB43182BE172008748FF /* Main_iPad.storyboard */,
-			);
-			name = Storyboards;
 			sourceTree = "<group>";
 		};
 		22E9DB7F182D6DB9008748FF /* Assets */ = {
@@ -232,6 +217,16 @@
 				22E9DB8B182D70B2008748FF /* radar@2x.png */,
 			);
 			name = Assets;
+			path = ..;
+			sourceTree = "<group>";
+		};
+		22E9DB90182D720F008748FF /* CMBeacon class */ = {
+			isa = PBXGroup;
+			children = (
+				22E9DB7C182D49E0008748FF /* CMBeacon.h */,
+				22E9DB7D182D49E0008748FF /* CMBeacon.m */,
+			);
+			name = "CMBeacon class";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -314,11 +309,9 @@
 				22E9DB8F182D70B2008748FF /* radar@2x.png in Resources */,
 				22E9DB8D182D70B2008748FF /* bullhorn@2x.png in Resources */,
 				22E9DB8E182D70B2008748FF /* radar.png in Resources */,
-				22E9DB45182BE172008748FF /* Main_iPad.storyboard in Resources */,
 				22E9DB77182D43AC008748FF /* CMClientViewController.xib in Resources */,
 				22E9DB7B182D47E1008748FF /* CMClientTableCell.xib in Resources */,
 				22E9DB4D182BE172008748FF /* Images.xcassets in Resources */,
-				22E9DB42182BE172008748FF /* Main_iPhone.storyboard in Resources */,
 				22E9DB8C182D70B2008748FF /* bullhorn.png in Resources */,
 				22E9DB79182D43C6008748FF /* CMBeaconViewController.xib in Resources */,
 				22E9DB39182BE172008748FF /* InfoPlist.strings in Resources */,
@@ -373,22 +366,6 @@
 				22E9DB38182BE172008748FF /* en */,
 			);
 			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-		22E9DB40182BE172008748FF /* Main_iPhone.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				22E9DB41182BE172008748FF /* Base */,
-			);
-			name = Main_iPhone.storyboard;
-			sourceTree = "<group>";
-		};
-		22E9DB43182BE172008748FF /* Main_iPad.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				22E9DB44182BE172008748FF /* Base */,
-			);
-			name = Main_iPad.storyboard;
 			sourceTree = "<group>";
 		};
 		22E9DB5C182BE172008748FF /* InfoPlist.strings */ = {
