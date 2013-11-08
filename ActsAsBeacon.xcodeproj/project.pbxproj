@@ -29,10 +29,10 @@
 		22E9DB79182D43C6008748FF /* CMBeaconViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 22E9DB78182D43C6008748FF /* CMBeaconViewController.xib */; };
 		22E9DB7B182D47E1008748FF /* CMClientTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 22E9DB7A182D47E1008748FF /* CMClientTableCell.xib */; };
 		22E9DB7E182D49E0008748FF /* CMBeacon.m in Sources */ = {isa = PBXBuildFile; fileRef = 22E9DB7D182D49E0008748FF /* CMBeacon.m */; };
-		22E9DB82182D6DC3008748FF /* radar.png in Resources */ = {isa = PBXBuildFile; fileRef = 22E9DB80182D6DC3008748FF /* radar.png */; };
-		22E9DB83182D6DC3008748FF /* radar@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 22E9DB81182D6DC3008748FF /* radar@2x.png */; };
-		22E9DB86182D6DFC008748FF /* bullhorn.png in Resources */ = {isa = PBXBuildFile; fileRef = 22E9DB84182D6DFC008748FF /* bullhorn.png */; };
-		22E9DB87182D6DFC008748FF /* bullhorn@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 22E9DB85182D6DFC008748FF /* bullhorn@2x.png */; };
+		22E9DB8C182D70B2008748FF /* bullhorn.png in Resources */ = {isa = PBXBuildFile; fileRef = 22E9DB88182D70B2008748FF /* bullhorn.png */; };
+		22E9DB8D182D70B2008748FF /* bullhorn@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 22E9DB89182D70B2008748FF /* bullhorn@2x.png */; };
+		22E9DB8E182D70B2008748FF /* radar.png in Resources */ = {isa = PBXBuildFile; fileRef = 22E9DB8A182D70B2008748FF /* radar.png */; };
+		22E9DB8F182D70B2008748FF /* radar@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 22E9DB8B182D70B2008748FF /* radar@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,10 +75,10 @@
 		22E9DB7A182D47E1008748FF /* CMClientTableCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CMClientTableCell.xib; sourceTree = "<group>"; };
 		22E9DB7C182D49E0008748FF /* CMBeacon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CMBeacon.h; sourceTree = "<group>"; };
 		22E9DB7D182D49E0008748FF /* CMBeacon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CMBeacon.m; sourceTree = "<group>"; };
-		22E9DB80182D6DC3008748FF /* radar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = radar.png; sourceTree = "<group>"; };
-		22E9DB81182D6DC3008748FF /* radar@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "radar@2x.png"; sourceTree = "<group>"; };
-		22E9DB84182D6DFC008748FF /* bullhorn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bullhorn.png; sourceTree = "<group>"; };
-		22E9DB85182D6DFC008748FF /* bullhorn@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bullhorn@2x.png"; sourceTree = "<group>"; };
+		22E9DB88182D70B2008748FF /* bullhorn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = bullhorn.png; path = ActsAsBeacon/assets/bullhorn.png; sourceTree = "<group>"; };
+		22E9DB89182D70B2008748FF /* bullhorn@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "bullhorn@2x.png"; path = "ActsAsBeacon/assets/bullhorn@2x.png"; sourceTree = "<group>"; };
+		22E9DB8A182D70B2008748FF /* radar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = radar.png; path = ActsAsBeacon/assets/radar.png; sourceTree = "<group>"; };
+		22E9DB8B182D70B2008748FF /* radar@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "radar@2x.png"; path = "ActsAsBeacon/assets/radar@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -226,10 +226,10 @@
 		22E9DB7F182D6DB9008748FF /* Assets */ = {
 			isa = PBXGroup;
 			children = (
-				22E9DB84182D6DFC008748FF /* bullhorn.png */,
-				22E9DB85182D6DFC008748FF /* bullhorn@2x.png */,
-				22E9DB80182D6DC3008748FF /* radar.png */,
-				22E9DB81182D6DC3008748FF /* radar@2x.png */,
+				22E9DB88182D70B2008748FF /* bullhorn.png */,
+				22E9DB89182D70B2008748FF /* bullhorn@2x.png */,
+				22E9DB8A182D70B2008748FF /* radar.png */,
+				22E9DB8B182D70B2008748FF /* radar@2x.png */,
 			);
 			name = Assets;
 			sourceTree = "<group>";
@@ -311,15 +311,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				22E9DB82182D6DC3008748FF /* radar.png in Resources */,
-				22E9DB86182D6DFC008748FF /* bullhorn.png in Resources */,
+				22E9DB8F182D70B2008748FF /* radar@2x.png in Resources */,
+				22E9DB8D182D70B2008748FF /* bullhorn@2x.png in Resources */,
+				22E9DB8E182D70B2008748FF /* radar.png in Resources */,
 				22E9DB45182BE172008748FF /* Main_iPad.storyboard in Resources */,
 				22E9DB77182D43AC008748FF /* CMClientViewController.xib in Resources */,
 				22E9DB7B182D47E1008748FF /* CMClientTableCell.xib in Resources */,
-				22E9DB87182D6DFC008748FF /* bullhorn@2x.png in Resources */,
-				22E9DB83182D6DC3008748FF /* radar@2x.png in Resources */,
 				22E9DB4D182BE172008748FF /* Images.xcassets in Resources */,
 				22E9DB42182BE172008748FF /* Main_iPhone.storyboard in Resources */,
+				22E9DB8C182D70B2008748FF /* bullhorn.png in Resources */,
 				22E9DB79182D43C6008748FF /* CMBeaconViewController.xib in Resources */,
 				22E9DB39182BE172008748FF /* InfoPlist.strings in Resources */,
 			);
