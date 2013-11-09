@@ -20,8 +20,6 @@
 @property (nonatomic, weak) IBOutlet UITextField *minorField;
 @property (nonatomic, weak) IBOutlet UILabel *statusLabel;
 
-@property (nonatomic) NSInteger minor;
-@property (nonatomic) NSInteger major;
 @property (nonatomic) NSString *identifier;
 
 @property (nonatomic) BOOL isBeaconing;
@@ -35,8 +33,6 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
     
-    self.major = 1;
-    self.minor = 1000;
     self.identifier = @"com.charismaticmegafauna.actsasbeacon";
     self.isBeaconing = NO;
 
@@ -54,6 +50,15 @@
     [tapCatcher setNumberOfTouchesRequired:1];
     [self.view addGestureRecognizer:tapCatcher];
     
+}
+
+-(void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+    [self.uuidField setText:self.CMUDID];
+    [self.majorField setText:[NSString stringWithFormat:@"%ld", (long)self.major]];
+    [self.minorField setText:[NSString stringWithFormat:@"%ld", (long)self.minor]];
+    
+    [self stopAdvertising];
 }
 
 - (void)didReceiveMemoryWarning
@@ -130,17 +135,10 @@
 
 -(IBAction)didTapUpdateButton:(id)sender {
     
-    self.major = [self.majorField.text integerValue];
-    self.minor = [self.minorField.text integerValue];
-    
-    self.CMUDID = self.uuidField.text;
-
     [self.majorLabel setText:[NSString stringWithFormat:@"Major: %d", self.major]];
     [self.minorLabel setText:[NSString stringWithFormat:@"Minor: %d", self.minor]];
+    [self.udidLabel setText:self.CMUDID];
 
-    [self.majorField resignFirstResponder];
-    [self.minorField resignFirstResponder];
-    
     [self stopAdvertising];
     [self startAdvertising];
     

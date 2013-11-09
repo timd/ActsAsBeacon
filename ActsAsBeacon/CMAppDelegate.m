@@ -9,10 +9,14 @@
 #import "CMAppDelegate.h"
 #import "CMBeaconViewController.h"
 #import "CMClientViewController.h"
+#import "CMUpdateViewController.h"
+
+#define kCMUDID @"B0702880-A295-A8AB-F734-031A98A512DE"
 
 @interface CMAppDelegate ()
 @property (nonatomic, strong) CMBeaconViewController *beaconController;
 @property (nonatomic, strong) CMClientViewController *clientController;
+@property (nonatomic, strong) CMUpdateViewController *updateViewController;
 @end
 
 @implementation CMAppDelegate
@@ -31,11 +35,30 @@
     [self.clientController setTitle:@"Client"];
     [self.clientController.tabBarItem setImage:[UIImage imageNamed:@"radar"]];
     
-    [self.beaconController setCMUDID:@"dae137d2-48a7-11e3-b6c8-ce3f5508acd9"];
-    [self.clientController setCMUDID:@"dae137d2-48a7-11e3-b6c8-ce3f5508acd9"];
+    self.updateViewController = [[CMUpdateViewController alloc] initWithNibName:@"CMUpdateViewController" bundle:nil];
+    [self.updateViewController setTitle:@"Update"];
+    [self.updateViewController.tabBarItem setImage:[UIImage imageNamed:@"redo"]];
+    
+//    [self.beaconController setCMUDID:@"dae137d2-48a7-11e3-b6c8-ce3f5508acd9"];
+//    [self.clientController setCMUDID:@"dae137d2-48a7-11e3-b6c8-ce3f5508acd9"];
+    
+    self.globalMajor = 100;
+    self.globalMinor = 123;
+
+    [self.beaconController setCMUDID:kCMUDID];
+    [self.beaconController setMajor:self.globalMajor];
+    [self.beaconController setMinor:self.globalMinor];
+    
+    [self.clientController setCMUDID:kCMUDID];
+    [self.clientController setMajor:self.globalMajor];
+    [self.clientController setMinor:self.globalMinor];
+    
+    [self.updateViewController setCMUUID:kCMUDID];
+    [self.updateViewController setMajor:self.globalMajor];
+    [self.updateViewController setMinor:self.globalMinor];
 
     UITabBarController *tabBarController = [[UITabBarController alloc] init];
-    [tabBarController setViewControllers:@[self.beaconController, self.clientController]];
+    [tabBarController setViewControllers:@[self.beaconController, self.clientController, self.updateViewController]];
 
     self.window.rootViewController = tabBarController;
     [self.window makeKeyAndVisible];
@@ -70,7 +93,19 @@
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
 
--(void)updateUUID {
+-(void)updateGlobals {
+    
+    [self.beaconController setCMUDID:self.globalUUID];
+    [self.beaconController setMajor:self.globalMajor];
+    [self.beaconController setMinor:self.globalMinor];
+    
+    [self.clientController setCMUDID:self.globalUUID];
+    [self.clientController setMajor:self.globalMajor];
+    [self.clientController setMinor:self.globalMinor];
+    
+    [self.updateViewController setCMUUID:self.globalUUID];
+    [self.updateViewController setMajor:self.globalMajor];
+    [self.updateViewController setMinor:self.globalMinor];
     
 }
 

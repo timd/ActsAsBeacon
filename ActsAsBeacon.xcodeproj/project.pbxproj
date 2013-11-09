@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		224D6839182EA0A9009A2307 /* CMUpdateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 224D6837182EA0A9009A2307 /* CMUpdateViewController.m */; };
+		224D683A182EA0A9009A2307 /* CMUpdateViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 224D6838182EA0A9009A2307 /* CMUpdateViewController.xib */; };
+		224D683E182EB6CC009A2307 /* redo.png in Resources */ = {isa = PBXBuildFile; fileRef = 224D683C182EB6CB009A2307 /* redo.png */; };
+		224D683F182EB6CC009A2307 /* redo@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 224D683D182EB6CB009A2307 /* redo@2x.png */; };
 		22E9DB2F182BE172008748FF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 22E9DB2E182BE172008748FF /* Foundation.framework */; };
 		22E9DB31182BE172008748FF /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 22E9DB30182BE172008748FF /* CoreGraphics.framework */; };
 		22E9DB33182BE172008748FF /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 22E9DB32182BE172008748FF /* UIKit.framework */; };
@@ -44,6 +48,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		224D6836182EA0A9009A2307 /* CMUpdateViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CMUpdateViewController.h; sourceTree = "<group>"; };
+		224D6837182EA0A9009A2307 /* CMUpdateViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CMUpdateViewController.m; sourceTree = "<group>"; };
+		224D6838182EA0A9009A2307 /* CMUpdateViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CMUpdateViewController.xib; sourceTree = "<group>"; };
+		224D683C182EB6CB009A2307 /* redo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = redo.png; path = ActsAsBeacon/assets/redo.png; sourceTree = "<group>"; };
+		224D683D182EB6CB009A2307 /* redo@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "redo@2x.png"; path = "ActsAsBeacon/assets/redo@2x.png"; sourceTree = "<group>"; };
 		22E9DB2B182BE172008748FF /* ActsAsBeacon.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ActsAsBeacon.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		22E9DB2E182BE172008748FF /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		22E9DB30182BE172008748FF /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -103,6 +112,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		224D683B182EA0AD009A2307 /* Update view controller */ = {
+			isa = PBXGroup;
+			children = (
+				224D6836182EA0A9009A2307 /* CMUpdateViewController.h */,
+				224D6837182EA0A9009A2307 /* CMUpdateViewController.m */,
+				224D6838182EA0A9009A2307 /* CMUpdateViewController.xib */,
+			);
+			name = "Update view controller";
+			sourceTree = "<group>";
+		};
 		22E9DB22182BE171008748FF = {
 			isa = PBXGroup;
 			children = (
@@ -141,6 +160,7 @@
 				22E9DB69182BE1D3008748FF /* App delegate */,
 				22E9DB6A182BE1DE008748FF /* Beacon view controller */,
 				22E9DB6B182BE1E9008748FF /* Client view controller */,
+				224D683B182EA0AD009A2307 /* Update view controller */,
 				22E9DB7F182D6DB9008748FF /* Assets */,
 				22E9DB4C182BE172008748FF /* Images.xcassets */,
 				22E9DB35182BE172008748FF /* Supporting Files */,
@@ -211,6 +231,8 @@
 		22E9DB7F182D6DB9008748FF /* Assets */ = {
 			isa = PBXGroup;
 			children = (
+				224D683C182EB6CB009A2307 /* redo.png */,
+				224D683D182EB6CB009A2307 /* redo@2x.png */,
 				22E9DB88182D70B2008748FF /* bullhorn.png */,
 				22E9DB89182D70B2008748FF /* bullhorn@2x.png */,
 				22E9DB8A182D70B2008748FF /* radar.png */,
@@ -307,12 +329,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				22E9DB8F182D70B2008748FF /* radar@2x.png in Resources */,
+				224D683E182EB6CC009A2307 /* redo.png in Resources */,
+				224D683F182EB6CC009A2307 /* redo@2x.png in Resources */,
 				22E9DB8D182D70B2008748FF /* bullhorn@2x.png in Resources */,
 				22E9DB8E182D70B2008748FF /* radar.png in Resources */,
 				22E9DB77182D43AC008748FF /* CMClientViewController.xib in Resources */,
 				22E9DB7B182D47E1008748FF /* CMClientTableCell.xib in Resources */,
 				22E9DB4D182BE172008748FF /* Images.xcassets in Resources */,
 				22E9DB8C182D70B2008748FF /* bullhorn.png in Resources */,
+				224D683A182EA0A9009A2307 /* CMUpdateViewController.xib in Resources */,
 				22E9DB79182D43C6008748FF /* CMBeaconViewController.xib in Resources */,
 				22E9DB39182BE172008748FF /* InfoPlist.strings in Resources */,
 			);
@@ -338,6 +363,7 @@
 				22E9DB7E182D49E0008748FF /* CMBeacon.m in Sources */,
 				22E9DB4B182BE172008748FF /* CMClientViewController.m in Sources */,
 				22E9DB3B182BE172008748FF /* main.m in Sources */,
+				224D6839182EA0A9009A2307 /* CMUpdateViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -544,6 +570,7 @@
 				22E9DB65182BE172008748FF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		22E9DB66182BE172008748FF /* Build configuration list for PBXNativeTarget "ActsAsBeaconTests" */ = {
 			isa = XCConfigurationList;
@@ -552,6 +579,7 @@
 				22E9DB68182BE172008748FF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

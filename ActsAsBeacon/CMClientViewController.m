@@ -22,6 +22,8 @@
 @property (nonatomic, weak) IBOutlet UITableView *tableView;
 @property (nonatomic, strong) NSMutableArray *tableDataArray;
 
+@property (nonatomic, weak) IBOutlet UILabel *serviceUUIDLabel;
+
 @property (nonatomic) BOOL isSeeking;
 
 @end
@@ -37,7 +39,14 @@
     
     self.tableDataArray = [[NSMutableArray alloc] init];
     [self.statusLabel setText:@"Not seeking"];
+    [self.serviceUUIDLabel setText:self.CMUDID];
     
+}
+
+-(void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    [self stopSeeking];
+    [self startSeeking];
 }
 
 - (void)didReceiveMemoryWarning
@@ -258,7 +267,9 @@
         [self.locManager startMonitoringForRegion:self.beaconRegion];
         
     }
-
+    
+    [self.serviceUUIDLabel setText:self.CMUDID];
+    
 }
 
 -(void)stopSeeking {

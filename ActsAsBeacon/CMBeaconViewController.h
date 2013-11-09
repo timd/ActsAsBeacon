@@ -13,5 +13,7 @@
 @interface CMBeaconViewController : UIViewController <CBPeripheralManagerDelegate>
 
 @property (nonatomic, copy) NSString *CMUDID;
+@property (nonatomic) NSInteger major;
+@property (nonatomic) NSInteger minor;
 
 @end

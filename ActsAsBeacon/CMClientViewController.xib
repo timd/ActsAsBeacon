@@ -8,6 +8,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CMClientViewController">
             <connections>
                 <outlet property="seekButton" destination="eI7-KE-Y3y" id="0mE-Oh-Lp3"/>
+                <outlet property="serviceUUIDLabel" destination="aMF-Db-F1P" id="T08-Ne-V6A"/>
                 <outlet property="statusLabel" destination="223-or-a7o" id="cfK-Nj-01c"/>
                 <outlet property="tableView" destination="Bio-Hp-dTW" id="mCc-Xy-oQZ"/>
                 <outlet property="view" destination="1" id="gQ9-eA-RLf"/>
@@ -25,7 +26,7 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="Bio-Hp-dTW">
-                    <rect key="frame" x="0.0" y="99" width="320" height="367"/>
+                    <rect key="frame" x="0.0" y="129" width="320" height="337"/>
                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <connections>
@@ -53,6 +54,13 @@
                     <rect key="frame" x="103" y="28" width="27" height="27"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 </imageView>
+                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aMF-Db-F1P">
+                    <rect key="frame" x="20" y="92" width="280" height="21"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
@@ -60,12 +68,12 @@
                 <constraint firstItem="eI7-KE-Y3y" firstAttribute="top" secondItem="Bio-Hp-dTW" secondAttribute="bottom" constant="8" id="3iu-64-jOM"/>
                 <constraint firstItem="eI7-KE-Y3y" firstAttribute="centerX" secondItem="Cix-Mg-gqj" secondAttribute="centerX" constant="-37" id="94r-nt-9tJ"/>
                 <constraint firstItem="eI7-KE-Y3y" firstAttribute="leading" secondItem="1" secondAttribute="leading" id="CyZ-If-zy8"/>
-                <constraint firstItem="Bio-Hp-dTW" firstAttribute="top" secondItem="223-or-a7o" secondAttribute="bottom" constant="8" symbolic="YES" id="Jt5-dr-FhW"/>
+                <constraint firstItem="Bio-Hp-dTW" firstAttribute="top" secondItem="223-or-a7o" secondAttribute="bottom" constant="38" id="Jt5-dr-FhW"/>
                 <constraint firstItem="223-or-a7o" firstAttribute="leading" secondItem="Cix-Mg-gqj" secondAttribute="leading" constant="-118" id="RMd-BK-JDY"/>
                 <constraint firstItem="Bio-Hp-dTW" firstAttribute="leading" secondItem="1" secondAttribute="leading" id="WIH-fP-MmU"/>
                 <constraint firstItem="eI7-KE-Y3y" firstAttribute="centerX" secondItem="223-or-a7o" secondAttribute="centerX" id="WiA-oV-DEo"/>
                 <constraint firstItem="223-or-a7o" firstAttribute="top" secondItem="Cix-Mg-gqj" secondAttribute="bottom" constant="8" symbolic="YES" id="Xpu-Hd-ULf"/>
-                <constraint firstItem="Bio-Hp-dTW" firstAttribute="top" secondItem="1" secondAttribute="top" constant="99" id="e9W-m5-CpK"/>
+                <constraint firstItem="Bio-Hp-dTW" firstAttribute="top" secondItem="1" secondAttribute="top" constant="129" id="e9W-m5-CpK"/>
                 <constraint firstAttribute="bottom" secondItem="eI7-KE-Y3y" secondAttribute="bottom" constant="64" id="hX1-pb-L4b"/>
                 <constraint firstItem="eI7-KE-Y3y" firstAttribute="trailing" secondItem="Bio-Hp-dTW" secondAttribute="trailing" id="hyX-6y-gA6"/>
                 <constraint firstItem="eI7-KE-Y3y" firstAttribute="leading" secondItem="Bio-Hp-dTW" secondAttribute="leading" id="oHd-0O-8iU"/>

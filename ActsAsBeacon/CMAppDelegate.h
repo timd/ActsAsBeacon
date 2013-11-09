@@ -11,5 +11,10 @@
 @interface CMAppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
+@property (nonatomic, copy) NSString *globalUUID;
+@property (nonatomic) NSInteger globalMajor;
+@property (nonatomic) NSInteger globalMinor;
+
+-(void)updateGlobals;
 
 @end
