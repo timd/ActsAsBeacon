@@ -31,8 +31,8 @@
     [self.clientController setTitle:@"Client"];
     [self.clientController.tabBarItem setImage:[UIImage imageNamed:@"radar"]];
     
-    [self.beaconController setCMUDID:@"dae137d2-48a7-11e3-b6c8-ce3f5508acd9"];
-    [self.clientController setCMUDID:@"dae137d2-48a7-11e3-b6c8-ce3f5508acd9"];
+    [self.beaconController setCMUDID:@"B0702880-A295-A8AB-F734-031A98A512DE"];
+    [self.clientController setCMUDID:@"B0702880-A295-A8AB-F734-031A98A512DE"];
 
     UITabBarController *tabBarController = [[UITabBarController alloc] init];
     [tabBarController setViewControllers:@[self.beaconController, self.clientController]];
