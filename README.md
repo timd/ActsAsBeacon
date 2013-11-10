@@ -18,10 +18,6 @@ To set up the device as a beacon, select the `Beacon` tab and set the `major` an
 To use the device as a beacon client, select the `Client` tab and tap the `Start/Stop seeking` button.
 Visible beacons will be displayed with major, minor, proximity, accuracy and signal strength values.
 
-### Limitations
-
-The UUID value is currently hard-coded to `dae137d2-48a7-11e3-b6c8-ce3f5508acd9`
-
 ### Future enhancements
 
 1. Add ability to configure BLE Mini boards over the air (work in progress)
