@@ -9,6 +9,8 @@ This app enables an iOS7 device to be configured as a Bluetooth LE beacon as an 
 
 Making iOS7 devices pretend to be Bluetooth LE beacons for testing purposes.
 
+![Screenshot](https://raw.github.com/timd/ActsAsBeacon/master/screenshot.png)
+
 ### How to use
 
 To set up the device as a beacon, select the `Beacon` tab and set the `major` and `minor` settings to the value of your choice.  Advertising can be controlled with the `Start/Stop advertising` buttons
