@@ -24,8 +24,8 @@ The UUID value is currently hard-coded to `dae137d2-48a7-11e3-b6c8-ce3f5508acd9`
 
 ### Future enhancements
 
-1. Add the ability to alter the hard-coded UUID value.
-1. Add icons and moar bling.
+1. Add ability to configure BLE Mini boards over the air (work in progress)
+1. Better table layout and moar bling
 1. iPad version
 1. Err...
 1. That's it.
